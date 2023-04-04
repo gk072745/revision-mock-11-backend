@@ -5,11 +5,12 @@ const { login } = require("./Routes/login.route")
 const { getProfile } = require("./Routes/getProfile.route")
 const { calculate } = require("./Routes/calculate.route")
 const {authorization}=require("./Middlewares/authorization.middleware")
+const cors=require("cors")
 require("dotenv").config()
 const app=express()
 
 app.use(express.json())
-
+app.use(cors())
 
 
 
